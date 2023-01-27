@@ -11,9 +11,10 @@ var city;
 
 //put fetch inside of an event listener
 //My weather API key 840e2eedb61362e6a6b45816372f15b9
-// fetch("api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}")
 
-fetch("https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=840e2eedb61362e6a6b45816372f15b9");
+// fetch(queryURL)
+
+fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=840e2eedb61362e6a6b45816372f15b9")
 
 
     .then(response => response.json())
