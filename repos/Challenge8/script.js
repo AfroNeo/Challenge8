@@ -5,10 +5,22 @@
 
 fetch("api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=840e2eedb61362e6a6b45816372f15b9")
     .then(response => response.json())
-    
-    
+    .then(data => {
+        
+        console.log(data);
+    })
+
+    //>This is another copy and paste example of the code above.
+    // fetch("api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=840e2eedb61362e6a6b45816372f15b9")
+    // .then(response => response.json())
+    // .then(data => {
+        
+    //     console.log(data);
+    // })
 
 
+    //This is an api call example
+    //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
 
 
 //on click fire off....grab the value from the button its self, you can pull off the string from the button and use delegation
