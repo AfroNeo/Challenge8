@@ -1,9 +1,21 @@
 
+
+var APIKEY = "840e2eedb61362e6a6b45816372f15b9";
+
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=840e2eedb61362e6a6b45816372f15b9";
+
+//You'll want to allow your application to accept user input and store it in the variable that you've created. You'll also likely need to specify state and country variables in your API call,
+
+var city;
+
+
 //put fetch inside of an event listener
 //My weather API key 840e2eedb61362e6a6b45816372f15b9
 // fetch("api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}")
 
-fetch("api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=840e2eedb61362e6a6b45816372f15b9")
+fetch("https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=840e2eedb61362e6a6b45816372f15b9");
+
+
     .then(response => response.json())
     .then(data => {
         
