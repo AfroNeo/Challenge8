@@ -2,7 +2,7 @@
 
 var APIKEY = "840e2eedb61362e6a6b45816372f15b9";
 
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=840e2eedb61362e6a6b45816372f15b9";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=840e2eedb61362e6a6b45816372f15b9";
 
 //You'll want to allow your application to accept user input and store it in the variable that you've created. You'll also likely need to specify state and country variables in your API call,
 
@@ -18,18 +18,20 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=840e2eedb6
 
 
     .then(response => response.json())
+    .then(citiesFound => {
+        let firstCity = citiesFound[0];
+        //error in console log means I'm trying to use data object that doesn't exist.
+        console.log(firstCity.lat);
+        console.log(firstCity.lon);
+    })
+
+    //>This is another copy and paste example of the code above.
+    fetch("api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=840e2eedb61362e6a6b45816372f15b9")
+    .then(response => response.json())
     .then(data => {
         
         console.log(data);
     })
-
-    //>This is another copy and paste example of the code above.
-    // fetch("api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=840e2eedb61362e6a6b45816372f15b9")
-    // .then(response => response.json())
-    // .then(data => {
-        
-    //     console.log(data);
-    // })
 
 
     //This is an api call example
